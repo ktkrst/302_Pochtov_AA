@@ -45,16 +45,16 @@
 		}
 		
 		public function toString(){
-			echo "ID: $this->id<br>";
-			echo "Название: $this->title<br>";
+			echo "ID: $this->id".PHP_EOL;
+			echo "Название: $this->title".PHP_EOL;
 			for ($i=0; $i < count($this->authors); $i++ ){
 				echo "Автор";
-				echo($i+1);
+				echo $i+1;
 				echo ": ".$this->authors[$i];
-				echo "<br>";
+				echo PHP_EOL;
 			}
-			echo "Издательство: $this->publisher<br>";
-			echo "Год: $this->year<br>";
+			echo "Издательство: $this->publisher".PHP_EOL;
+			echo "Год: $this->year".PHP_EOL;
 		}
 	}
 ?>
