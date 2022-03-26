@@ -1,2 +1,2 @@
 #!/bin/bash
-"php" run_test.php %*
+"php" 3.php %*

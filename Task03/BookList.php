@@ -3,7 +3,6 @@
 	class BooksList{
 		public $books;
 		
-		
 		public function __construct() {
 			$this->books = array();
 		}
@@ -23,13 +22,13 @@
 		public  function toString(){
 			foreach ($this->books as $book){
 				$book->toString();
-				echo "<br>";
+				echo PHP_EOL;
 			}
 		}
 		
 		public function save() {
 			if(!file_exists('booklist.file')){
-				echo "creating a new save file...<br>";
+				echo "creating a new save file...>".PHP_EOL;
 			}
 			$file_handle = fopen('booklist.file', 'w');
 			fwrite($file_handle, serialize($this->books));
@@ -43,7 +42,7 @@
 				$this->books = unserialize($contents);
 				fclose($file_handle);
 			}
-			else echo "save file doen't exist;<br>";
+			else echo "save file doen't exist;".PHP_EOL;
 		}
 	}
 ?>
